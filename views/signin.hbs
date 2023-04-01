@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="/css/index.css">
+</head>
+
+<body>
+  {{#if login}}
+  {{>navLogin name=login.name}}
+  {{else}}
+  {{>nav}}
+  {{/if}}
+  <div class="fluid">
+    <div class="container">
+      <div class="signin">
+        <div class="signin-container">
+          <div id="signin">
+            <div class="grid">
+              <form method="POST" class="form" action="/signin">
+                <h2 style="margin-bottom: 10px; font-weight: 500;">Sigin to <i>I am You!</i></h2>
+                <label for="">Email ID</label>
+                <input type="text" placeholder="Email ID" name="email">
+                <label for="">Password</label>
+                <input type="text" placeholder="Password" name="password">
+                <button type="submit">Submit</button>
+                <button type="submit" style="background-color: white; color: black; font-size: medium;">Or Register</button>
+              </form>
+              <div class="img-container">
+                <div style="width: 80%;">
+                  <img src="/images/account.png">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{>footer}}
+</body>
+
+</html>

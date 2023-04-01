@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="/css/index.css">
+</head>
+
+<body>
+  {{#if login}}
+  {{>navLogin name=login.name}}
+  {{else}}
+  {{>nav}}
+  {{/if}}
+  <div class="fluid">
+    <div class="container">
+      <div class="signin" style="min-height: 500px; display: flex; justify-content: center; align-items: center; flex-direction: column;">
+        <!-- <div class="signin-container"> -->
+        <h2 style="font-weight: 500; color: {{color}}">{{err}}</h2>
+        <div style="display: flex; flex-direction: row; margin-top: 20px;">
+          {{#if btn}}
+          {{else}}
+            <a href="/signin"><button class="btn">Login</button></a>
+            <a href="/register"><button class="btn">Register</button></a>
+          {{/if}}
+        </div>
+        <!-- </div> -->
+      </div>
+    </div>
+  </div>
+  {{>footer}}
+</body>
+
+</html>

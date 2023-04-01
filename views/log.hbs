@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="/css/index.css">
+</head>
+
+<body>
+  {{#if login}}
+  {{>navLogin name=login.name}}
+  {{else}}
+  {{>nav}}
+  {{/if}}
+  <div class="fluid">
+    <div class="container">
+      <div class="signin" style="min-height: 500px; display: flex; justify-content: center; align-items: center; flex-direction: column;">
+        <!-- <div class="signin-container"> -->
+        <h2 style="font-weight: 500;">Hello <i>{{name}}</i>, you are eligible to get access to <u>Jupiter</u></h2>
+        <div style="display: flex; flex-direction: row; margin-top: 20px;">
+          <a href="#"><button class="btn">Jupiter</button></a>
+          <a href="#"><button class="btn">Mars</button></a>
+          <a href="#"><button class="btn">Nepture</button></a>
+          <a href="#"><button class="btn">Saturn</button></a>
+        </div>
+        <!-- </div> -->
+      </div>
+    </div>
+  </div>
+  {{>footer}}
+</body>
+
+</html>
